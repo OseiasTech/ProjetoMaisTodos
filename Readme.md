@@ -1,4 +1,4 @@
-# Demo QA #
+# Mais Todos #
 
 Este projeto é destinado a automações de teste Front-end E2E funcional da plataforma Web do Demo QA
 
@@ -88,5 +88,5 @@ fixtures:
 
 ### Created by ###
 
-* Jessica Oliveira 
+* Oseias Gomes 
 
