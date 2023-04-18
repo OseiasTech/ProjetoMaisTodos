@@ -2,11 +2,27 @@
 
 import aplicationBookElements from "../elements/bookStoreElements";
 const ambiente = Cypress.config("baseUrl")
+const ambienteinvalido = Cypress.config("loginInvalido")
 import dados from "../../fixtures/dados.json"
 const aplicationDemoQA = new aplicationBookElements;
 
 
 class demoQA {
+
+// Cenario: Realizar login com o usuário invalido 
+acessarSiteInvalido() {
+    cy.visit(ambienteinvalido)
+}
+
+LoginInvalido(){
+    cy.get(aplicationDemoQA.lbl_userName1()).first().type(dados.userNameInvalido);
+    cy.get(aplicationDemoQA.lbl_password1()).type(dados.passwordInvalido);
+    cy.get(aplicationDemoQA.btn_logarAplicacao()).click();
+}
+
+ValidarLoginInvalido(){
+    cy.get(aplicationDemoQA.txt_loginInvalido()).should('contain', 'Invalid username or password!')
+}
 
 // Cenário: Realizar o login na aplicação //
 acessarSite() {

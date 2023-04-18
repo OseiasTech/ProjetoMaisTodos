@@ -1,9 +1,7 @@
 {
 
-  "firstName": "Maria",
-  "lastName": "Silva",
-  "userName": "Maria Silva",
-  "passwordInvalida": "11111",
+  "userNameInvalido": "Usuário incorreto",
+  "passwordInvalido": "Teste@023",
   
   
   "userNameSucesso": "Teste do Teste",

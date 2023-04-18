@@ -4,13 +4,19 @@
     "cypress-cucumber-preprocessor": {
         "step_definitions": "cypress/support/steps"
     },
+    "scripts": {
+        "cy:allure": "cypress run --env allure=true",
+        "cy:report": "allure generate allure-results --clean && allure open",
+        "cy:test":   "cypress run --reporter cypress-allure-plugin"
+      },
+  
     "devDependencies": {
-        "@shelex/cypress-allure-plugin": "^2.35.2",
+        "@shelex/cypress-allure-plugin": "^2.38.3",
         "allure-commandline": "^2.21.0",
         "cypress": "^10.10.0",
         "cypress-cucumber-preprocessor": "^4.3.1",
         "eslint-plugin-cypress": "^2.12.1"
-        },
+    },
     "dependencies": {
         "cypress-xpath": "^2.0.1"
     }

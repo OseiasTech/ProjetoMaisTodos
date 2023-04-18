@@ -2,6 +2,17 @@ import demoQA from "../page/bookStorePage";
 
 const bookStore = new demoQA()
 
+// Cenario: Realizar login com o usuário invalido 
+
+When("acesso a plataforma com usuario invalido", () => {
+    bookStore.acessarSiteInvalido()
+    bookStore.LoginInvalido()
+});
+
+Then("o sistema informa que o usuario e invalido", () => {
+    bookStore.ValidarLoginInvalido()
+});
+
 // Cenário: Realizar o login na aplicação //
 Given("que acesso a aplicação WEB", () => {
     bookStore.acessarSite()

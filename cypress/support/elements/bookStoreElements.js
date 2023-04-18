@@ -1,5 +1,7 @@
 class aplicationBookElements {
 
+    txt_loginInvalido = () => {return '#name'}
+
     btn_categoriaBookStoreApp = () => {return '.category-cards > :nth-child(6)'};
     btn_login = () => {return '#login'};
     btn_newUser = () => {return '#newUser'};
